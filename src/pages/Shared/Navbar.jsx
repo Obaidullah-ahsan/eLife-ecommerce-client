@@ -2,9 +2,19 @@ import { BsLightningChargeFill } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        toast.success("User Logout Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const navlinks = (
     <>
       <li>
@@ -81,12 +91,9 @@ const Navbar = () => {
             </svg>
             <span className="badge badge-xs indicator-item">8</span>
           </div>
-          <Link to="/login" className="btn h-10 min-h-10 rounded-none">
-            Login
-          </Link>
         </div>
       </div>
-      {/* <div className="navbar-end">
+      <div className="ml-5">
         {user ? (
           <button
             onClick={handleLogout}
@@ -95,9 +102,11 @@ const Navbar = () => {
             Logout
           </button>
         ) : (
-          
+          <Link to="/login" className="btn h-10 min-h-10 rounded-none">
+            Login
+          </Link>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
