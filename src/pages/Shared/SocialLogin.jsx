@@ -1,31 +1,22 @@
-// import Swal from "sweetalert2";
-// import useAuth from "../../Hooks/useAuth";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const SocialLogin = () => {
-  // const { googleLogin } = useAuth();
-  // const navigate = useNavigate();
-  // const handleGoogleLogin = () => {
-  //   googleLogin()
-  //     .then((result) => {
-  //       console.log(result.user);
-  //       Swal.fire({
-  //         title: "Success!",
-  //         text: "User Login Successfully",
-  //         icon: "success",
-  //         confirmButtonText: "Ok",
-  //       });
-  //       navigate("/");
-  //     })
-  //     .catch((error) => {
-  //       Swal.fire({
-  //         title: "Error!",
-  //         text: error.code.slice(5, 50),
-  //         icon: "error",
-  //         confirmButtonText: "Try again",
-  //       });
-  //     });
-  // };
+  const { googleLogin } = useAuth();
+  const navigate = useNavigate();
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        toast.success("User Login Successfully");
+        navigate("/");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        toast.error(error.code.slice(5, 50));
+      });
+  };
+
   return (
     <div>
       <div className="flex items-center justify-between mt-4">
@@ -37,7 +28,7 @@ const SocialLogin = () => {
       </div>
       <div className=" flex items-center mt-6">
         <button
-          // onClick={handleGoogleLogin}
+          onClick={handleGoogleLogin}
           type="button"
           className="btn btn-outline w-full rounded-full flex items-center justify-center"
         >

@@ -1,17 +1,10 @@
 import { BsLightningChargeFill } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-// import useAuth from "../../Hooks/useAuth";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
-  // const { user, logout } = useAuth();
-  // const handleLogout = () => {
-  //   logout()
-  //     .then(() => {})
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
-  // };
+  const { user, logout } = useAuth();
   const navlinks = (
     <>
       <li>
@@ -88,6 +81,9 @@ const Navbar = () => {
             </svg>
             <span className="badge badge-xs indicator-item">8</span>
           </div>
+          <Link to="/login" className="btn h-10 min-h-10 rounded-none">
+            Login
+          </Link>
         </div>
       </div>
       {/* <div className="navbar-end">
@@ -99,9 +95,7 @@ const Navbar = () => {
             Logout
           </button>
         ) : (
-          <Link to="/login" className="btn h-10 min-h-10 rounded-none">
-            Login
-          </Link>
+          
         )}
       </div> */}
     </div>

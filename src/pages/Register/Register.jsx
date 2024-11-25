@@ -1,48 +1,38 @@
 import { Link, useNavigate } from "react-router-dom";
 import SignupLogo from "../../assets/SignupPageLogo.svg";
 import SocialLogin from "../Shared/SocialLogin";
-// import useAuth from "../../Hooks/useAuth";
-// import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Register = () => {
-  // const { createUser, updateUser } = useAuth();
-  // const navigate = useNavigate();
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
-  //   const form = e.target;
-  //   const name = form.name.value;
-  //   const photo = form.photo.value;
-  //   const email = form.email.value;
-  //   const password = form.password.value;
-  //   createUser(email, password)
-  //     .then((result) => {
-  //       updateUser(name, photo)
-  //         .then(() => {
-  //           Swal.fire({
-  //             title: "Success!",
-  //             text: "User Register Successfully",
-  //             icon: "success",
-  //             confirmButtonText: "Ok",
-  //           });
-  //           form.reset();
-  //           // when user Successfully register user navigate homepage
-  //           navigate("/");
-  //         })
-  //         .catch((error) => {
-  //           console.log(error.message);
-  //         });
-  //       console.log(result.user);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //       Swal.fire({
-  //         title: "Error!",
-  //         text: error.code.slice(5, 50),
-  //         icon: "error",
-  //         confirmButtonText: "Try again",
-  //       });
-  //     });
-  // };
+  const { createUser, updateUser } = useAuth();
+  const navigate = useNavigate();
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    createUser(email, password)
+      .then((result) => {
+        updateUser(name, photo)
+          .then(() => {
+            toast.success("User Register Successfully");
+            form.reset();
+            // when user Successfully register user navigate homepage
+            navigate("/");
+          })
+          .catch((error) => {
+            toast.error(error.code.slice(5, 50));
+          });
+        console.log(result.user);
+      })
+      .catch((error) => {
+        toast.error(error.code.slice(5, 50));
+      });
+    console.log(email, password);
+  };
   return (
     <div>
       <div className="flex w-full my-12 max-w-sm mx-auto overflow-hidden bg-base-100 rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-5xl">
@@ -54,9 +44,7 @@ const Register = () => {
           <h2 className="text-center mx-auto text-2xl font-bold">
             Register Now!
           </h2>
-          <form
-          //  onSubmit={handleRegister}
-           >
+          <form onSubmit={handleRegister}>
             <div className="mt-4">
               <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
                 Name
@@ -114,7 +102,7 @@ const Register = () => {
             </div>
           </form>
           <SocialLogin></SocialLogin>
-          <p className="mt-8 text-sm font-light text-center text-gray-400">
+          <p className="mt-8 text-xs font-light text-center text-gray-400">
             {" "}
             Already have an account?{" "}
             <Link
