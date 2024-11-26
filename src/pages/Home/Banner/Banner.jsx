@@ -2,7 +2,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col justify-center md:pl-12 lg:pl-24 banner-bg-sm banner-bg h-[430px] lg:h-[580px]">
+    <div className="flex flex-col justify-center md:pl-12 lg:pl-24 banner-bg-sm banner-bg h-[430px] lg:h-[580px] 2xl:h-[770px]">
       <div className="text-center mx-auto md:text-left md:mx-0">
         <h3 className="text-gray-500 uppercase tracking-[.60em] mb-4">new product</h3>
         <h1 className="text-5xl text-white font-semibold tracking-[.10em] mb-6">XX99 MARK ll <br/> HEADPHONES</h1>
