@@ -1,0 +1,423 @@
+[
+    {
+      "product_name": "Sony WH-1000XM5",
+      "price": 399,
+      "brand": "Sony",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/02_hsrxrk.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Bose QuietComfort 45",
+      "price": 329,
+      "brand": "Sony",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/07_ueyfbe.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Jabra Elite 85H",
+      "price": 250,
+      "brand": "Philips",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/05_l2kqls.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Beats Studio 3",
+      "price": 349,
+      "brand": "AKG",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/04_dcfbsu.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Sennheiser Momentum 4",
+      "price": 349,
+      "brand": "Sony",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/03_cjgaic.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Sony WF-1000XM4",
+      "price": 279,
+      "brand": "Sony",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987591/08_mbrioz.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Marshall Major IV",
+      "price": 149,
+      "brand": "Marshall",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987590/01_efm0nw.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Samsung Galaxy Buds Pro 2",
+      "price": 199,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987593/06_j79frv.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "AKG Y500",
+      "price": 179,
+      "brand": "AKG",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987592/12_poorxm.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Audio-Technica ATH-M50X",
+      "price": 169,
+      "brand": "Audio-Technica",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987592/11_xk61ga.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Philips Fidelio L3",
+      "price": 329,
+      "brand": "Philips",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987591/09_mgqfw7.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Plantronics BackBeat PRO 2",
+      "price": 199,
+      "brand": "Plantronics",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987592/10_zpyysl.png",
+      "product_category": "headphone"
+    },
+    {
+      "product_name": "Apple MacBook Air M2",
+      "price": 1199,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987658/01_qb4wtx.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Dell XPS 13",
+      "price": 999,
+      "brand": "Dell",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987658/02_hdlctu.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "HP Spectre x360",
+      "price": 1249,
+      "brand": "hp",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987659/03_iq1bug.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Lenovo ThinkPad X1 Carbon",
+      "price": 1599,
+      "brand": "Lenovo",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987659/04_oryomp.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Razer Blade 15",
+      "price": 2299,
+      "brand": "Razer",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987659/05_dtkfx4.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Acer Aspire 7",
+      "price": 749,
+      "brand": "Acer",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987661/09_wj0hie.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Asus ROG Zephyrus G14",
+      "price": 1399,
+      "brand": "Asus",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987660/07_bxtpq2.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Microsoft Surface Laptop 5",
+      "price": 1299,
+      "brand": "Microsoft",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987660/08_fcqmvj.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "LG Gram 17",
+      "price": 1799,
+      "brand": "LG",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987661/06_fnje0m.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Alienware X17 R2",
+      "price": 2799,
+      "brand": "Alienware",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987661/10_fq0ple.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Alienware X17 R1",
+      "price": 2099,
+      "brand": "Alienware",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987663/11_jj8ogw.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "HP Omen 15",
+      "price": 1049,
+      "brand": "hp",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987661/12_orelw5.png",
+      "product_category": "laptop"
+    },
+    {
+      "product_name": "Apple iPhone 14",
+      "price": 799,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987709/02_vdiqmt.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Apple iPhone 14 pro max",
+      "price": 999,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987709/01_hdfbjk.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Apple iPhone 13",
+      "price": 899,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987710/03_vejnbb.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Samsung Galaxy S23",
+      "price": 699,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987717/10_vtcbvx.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Samsung Galaxy S22",
+      "price": 699,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987716/12_n6em7n.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Xiaomi Mi 13 Ultra",
+      "price": 999,
+      "brand": "Xiaomi",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987711/07_sanewu.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Vivo X90 Pro",
+      "price": 799,
+      "brand": "Vivo",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987710/05_bidnuj.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Apple iPhone 12",
+      "price": 1099,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987713/04_lt7jmo.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Motorola Edge 40 Pro",
+      "price": 649,
+      "brand": "Motorola",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987716/08_nqtgwd.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Sony Xperia 1 V",
+      "price": 1299,
+      "brand": "Sony",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987715/11_zjwvvm.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Samsung Galaxy S24",
+      "price": 999,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987715/09_ephwm4.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Realme GT 5",
+      "price": 549,
+      "brand": "Realme",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987711/06_sstu81.png",
+      "product_category": "mobile"
+    },
+    {
+      "product_name": "Apple Watch Series 9",
+      "price": 399,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987755/06_jmu9vr.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Samsung Galaxy Watch 6",
+      "price": 349,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987755/04_cylicn.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Garmin Venu 2 Plus",
+      "price": 449,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987754/05_jyewmw.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Fossil Gen 6",
+      "price": 299,
+      "brand": "Fossil",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987753/02_fqmizd.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Amazfit GTR 4",
+      "price": 199,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987759/09_uneyuo.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Honor Magic Watch 2",
+      "price": 229,
+      "brand": "Honor",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987758/03_qcmdep.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "TicWatch Pro 5",
+      "price": 349,
+      "brand": "TicWatch",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987757/01_feag17.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Withings ScanWatch",
+      "price": 279,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987755/07_ruag0d.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Huawei Watch GT 4",
+      "price": 229,
+      "brand": "Huawei",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987761/11_cbbp2n.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Fitbit Versa 4",
+      "price": 199,
+      "brand": "Fitbit",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987760/08_pauf5a.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Suunto 9 Peak",
+      "price": 499,
+      "brand": "Suunto",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987760/12_wnsebg.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Polar Ignite 3",
+      "price": 329,
+      "brand": "Polar",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987759/10_ysxixu.png",
+      "product_category": "smartwatch"
+    },
+    {
+      "product_name": "Apple iPad Pro 12.9",
+      "price": 1099,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987790/04_ur4piy.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Samsung Galaxy Tab S9",
+      "price": 849,
+      "brand": "Samsung",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987789/03_b0ctd7.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Microsoft Surface Pro 9",
+      "price": 999,
+      "brand": "Microsoft",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987789/01_wds82m.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Huawei MatePad Pro",
+      "price": 649,
+      "brand": "Huawei",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987790/02_uuv6cy.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Realme Pad X",
+      "price": 299,
+      "brand": "Realme",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987790/05_sm0cu1.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Oppo Pad Air",
+      "price": 229,
+      "brand": "Oppo",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987791/06_ywirpb.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Lenovo Tab P11 Pro",
+      "price": 499,
+      "brand": "Lenovo",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987796/10_kbgjqq.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Xiaomi Pad 6",
+      "price": 399,
+      "brand": "Xiaomi",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987795/07_thi9xo.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Amazon Fire HD 10",
+      "price": 149,
+      "brand": "Amazon",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987795/08_wor8et.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Nokia T20",
+      "price": 249,
+      "brand": "Nokia",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987798/12_kcyn04.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Alldocube iPlay 50",
+      "price": 219,
+      "brand": "Apple",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987797/11_vadvng.png",
+      "product_category": "tablet"
+    },
+    {
+      "product_name": "Google Pixel Tablet",
+      "price": 649,
+      "brand": "Google",
+      "image": "https://res.cloudinary.com/dkel6zerr/image/upload/v1732987797/09_bibnoi.png",
+      "product_category": "tablet"
+    }
+  ]
+  

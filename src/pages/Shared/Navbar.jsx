@@ -3,6 +3,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
+import { FaUser } from "react-icons/fa";
+import { IoIosLogOut } from "react-icons/io";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -21,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/product">Products</NavLink>
+        <NavLink to="/products">Products</NavLink>
       </li>
       <li>
         <NavLink to="/services">Services</NavLink>
@@ -33,7 +35,7 @@ const Navbar = () => {
   );
   return (
     <div className="navbar bg-black text-white px-8 lg:px-24">
-      <div className="navbar-start">
+      <div className="navbar-start w-[40%]">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -53,7 +55,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu text-black menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {navlinks}
           </ul>
@@ -65,7 +67,7 @@ const Navbar = () => {
           eLife
         </a>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end w-[60%]">
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
@@ -95,12 +97,22 @@ const Navbar = () => {
       </div>
       <div className="ml-5">
         {user ? (
-          <button
-            onClick={handleLogout}
-            className="btn h-10 min-h-10 rounded-none"
-          >
-            Logout
-          </button>
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} className="bg-slate-800 p-3 rounded-sm">
+              <FaUser size={18} />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <button
+                onClick={handleLogout}
+                className="btn h-10 min-h-10 rounded-none flex gap-2"
+              >
+                Logout <IoIosLogOut size={18}/>
+              </button>
+            </ul>
+          </div>
         ) : (
           <Link to="/login" className="btn h-10 min-h-10 rounded-none">
             Login
