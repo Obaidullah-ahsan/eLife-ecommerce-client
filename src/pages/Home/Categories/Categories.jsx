@@ -44,7 +44,7 @@ const Categories = () => {
     <div className="px-4 md:px-12 lg:px-24 my-10 2xl:my-14">
       <div className="flex gap-3 mb-6">
         <span className="border-[4px] rounded-full border-black"></span>
-        <h1 className="text-xl font-bold"> Categories</h1>
+        <h1 className="text-xl font-bold">Featured Categories</h1>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
         {categories.map((categorie, idx) => (
