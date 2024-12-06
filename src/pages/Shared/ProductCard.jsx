@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
         />
         <CiHeart
           size={30}
-          className="bg-white p-1 rounded-full absolute top-3 right-3"
+          className="bg-base-200 p-1 rounded-full absolute top-3 right-3"
         />
       </figure>
       <div className="card-body">

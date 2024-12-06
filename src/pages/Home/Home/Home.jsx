@@ -9,17 +9,17 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="px-4 md:px-12 lg:px-24 mt-10 mb-14 2xl:mb-14 flex">
+      <div className="px-4 md:px-12 lg:px-24 mt-10 mb-14 2xl:mb-14 hidden lg:flex">
         <div className="px-4 border-r border-slate-300">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1705403647671205.png"
             alt=""
           />
         </div>
         <div className="flex items-center gap-3 px-3 border-r border-slate-300">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1700028373353456.png"
             alt=""
           />
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
         <div className="flex items-center gap-3 px-3 border-r border-slate-300">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1700028383550209.png"
             alt=""
           />
@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <div className="flex items-center gap-3 px-3 border-r border-slate-300">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1705401680347928.png"
             alt=""
           />
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
         <div className="flex items-center gap-3 px-3 border-r border-slate-300">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1700028399924595.png"
             alt=""
           />
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
         <div className="flex items-center gap-3 px-3">
           <img
-            className="h-10"
+            className="h-9"
             src="https://assets.gadgetandgear.com/upload/media/1700028409214202.png"
             alt=""
           />

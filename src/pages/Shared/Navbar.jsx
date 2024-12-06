@@ -114,7 +114,7 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <Link to="/login" className="btn h-10 min-h-10 rounded-none">
+          <Link to="/login" className="btn hover:btn-outline h-10 min-h-10 bg-[#F26E21] border-none text-white rounded-none">
             Login
           </Link>
         )}
