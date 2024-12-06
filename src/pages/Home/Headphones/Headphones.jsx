@@ -37,7 +37,7 @@ const Headphones = () => {
         </div>
       ) : (
         <Swiper
-          slidesPerView={1}
+          slidesPerView={2}
           loop={true}
           spaceBetween={3}
           navigation={true}

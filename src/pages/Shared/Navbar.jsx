@@ -60,18 +60,18 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <a className="text-xl font-bold flex items-center gap-1">
+        <Link to="/" className="text-xl font-bold flex items-center gap-1">
           <span>
             <BsLightningChargeFill />
           </span>
           eLife
-        </a>
+        </Link>
       </div>
       <div className="navbar-end w-[60%]">
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-7">
           <div className="indicator">
             <FaRegHeart size={18} />
             <span className="badge badge-xs indicator-item">8</span>
@@ -95,7 +95,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="ml-5">
+      <div className="ml-7">
         {user ? (
           <div className="dropdown dropdown-end">
             <div tabIndex={0} className="bg-slate-800 p-3 rounded-sm">

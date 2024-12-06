@@ -11,14 +11,14 @@ const Home = () => {
       <Banner />
       <Categories />
       <Headphones />
-      <div className="px-4 md:px-12 lg:px-24 my-10 2xl:my-14 flex gap-6">
+      <div className="px-4 md:px-12 lg:px-24 my-10 2xl:my-14 flex flex-col md:flex-row gap-6">
         <img
-          className="w-[49%]"
+          className="md:w-[49%]"
           src="https://assets.gadgetandgear.com/upload/media/655x343-airpods-4_1.png"
           alt=""
         />
         <img
-          className="w-[49%]"
+          className="md:w-[49%]"
           src="https://assets.gadgetandgear.com/upload/media/655x343-apple-watch-series-10-banner_1.png"
           alt=""
         />

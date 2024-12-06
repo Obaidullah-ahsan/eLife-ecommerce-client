@@ -38,7 +38,7 @@ const Products = () => {
           className="flex p-1 overflow-hidden border rounded"
         >
           <input
-            className="px-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
+            className="px-2 w-full text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
             type="text"
             onChange={(e) => setSearchText(e.target.value)}
             value={searchText}
@@ -84,7 +84,7 @@ const Products = () => {
           <ScaleLoader />
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mt-8">
           {products.map((product) => (
             <ProductCard key={product._id} product={product}></ProductCard>
           ))}

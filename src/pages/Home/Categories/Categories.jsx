@@ -60,7 +60,7 @@ const Categories = () => {
             />
 
             <div className="w-[60%] p-4 md:p-4">
-              <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
+              <h1 className="text-base md:text-xl font-semibold text-gray-800 dark:text-white">
                 {categorie.product_categorie}
               </h1>
             </div>
