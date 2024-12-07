@@ -3,6 +3,7 @@ import SignupLogo from "../../assets/SignupPageLogo.svg";
 import SocialLogin from "../Shared/SocialLogin";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Register = () => {
   const { createUser, updateUser } = useAuth();
@@ -18,6 +19,14 @@ const Register = () => {
       .then((result) => {
         updateUser(name, photo)
           .then(() => {
+            const userInfo = {
+              email,
+              name,
+              role: "customer",
+            };
+            axios.post("http://localhost:5000/users", userInfo).then((res) => {
+              console.log(res.data);
+            });
             toast.success("User Register Successfully");
             form.reset();
             // when user Successfully register user navigate homepage
