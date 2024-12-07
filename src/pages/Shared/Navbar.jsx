@@ -5,17 +5,13 @@ import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
 import { FaUser } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import useCart from "../../Hooks/useCart";
+import useWishlist from "../../Hooks/useWishlist";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-  const [cart, setCart] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:5000/cart").then((res) => {
-      setCart(res.data);
-    });
-  }, []);
+  const [cart] = useCart();
+  const [wishlist] = useWishlist();
   const handleLogout = () => {
     logout()
       .then(() => {
@@ -80,10 +76,14 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
         <div className="flex gap-7">
-          <div className="indicator">
-            <FaRegHeart size={18} />
-            <span className="badge badge-xs indicator-item">8</span>
-          </div>
+          {user && (
+            <div className="indicator">
+              <FaRegHeart size={18} />
+              <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
+                {wishlist?.length}
+              </span>
+            </div>
+          )}
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,11 @@ const Navbar = () => {
                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
               />
             </svg>
-            <span className="badge badge-xs indicator-item">{cart?.length}</span>
+            {user && (
+              <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
+                {cart?.length}
+              </span>
+            )}
           </div>
         </div>
       </div>
