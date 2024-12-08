@@ -7,21 +7,22 @@ import Products from "../pages/Products/Products";
 import About from "../pages/About/About";
 import Cart from "../pages/Cart/Cart";
 import Wishlist from "../pages/Wishlist/Wishlist";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Laptop from "../pages/Laptop/Laptop";
+import AllHeadphones from "../pages/AllHeadphones/AllHeadphones";
+import AllSmartwatch from "../pages/AllSmartwatch/AllSmartwatch";
+import AllPhone from "../pages/AllPhone/AllPhone";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
       },
-      // Categories section route
-      // {
-      //   path: "/",
-      //   element: <Home></Home>,
-      // },
       {
         path: "/products",
         element: <Products></Products>,
@@ -41,6 +42,27 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      // Categories section route
+      {
+        path: "/headphones",
+        element: <AllHeadphones></AllHeadphones>,
+      },
+      {
+        path: "/smartwatch",
+        element: <AllSmartwatch></AllSmartwatch>,
+      },
+      {
+        path: "/phone",
+        element: <AllPhone></AllPhone>,
+      },
+      {
+        path: "/tablet",
+        element: <Laptop></Laptop>,
+      },
+      {
+        path: "/laptop",
+        element: <Laptop></Laptop>,
       },
       // Cart route
       {

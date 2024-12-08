@@ -129,9 +129,20 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 z-[1] mt-3 w-52 p-2 shadow"
             >
+              <div className="mb-2 flex gap-2">
+                <img
+                  className="object-cover w-10 h-10 rounded-lg"
+                  src={user?.photoURL}
+                  alt=""
+                />
+                <div className="text-black">
+                  <h2 className="font-bold">{user?.displayName}</h2>
+                  <p className="text-xs">{user?.email}</p>
+                </div>
+              </div>
               <button
                 onClick={handleLogout}
-                className="btn h-10 min-h-10 rounded-none flex gap-2"
+                className="btn h-10 min-h-10 bg-[#F26E21] border-none rounded-none flex gap-2"
               >
                 Logout <IoIosLogOut size={18} />
               </button>

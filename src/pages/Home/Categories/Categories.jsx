@@ -56,10 +56,10 @@ const Categories = () => {
             <img
               src={categorie.image}
               alt=""
-              className="bg-blue-200 p-4 w-[40%] lg:max-h-24 2xl:max-h-36 bg-cover"
+              className="bg-blue-200 p-4 w-[30%] 2xl:w-[40%] lg:max-h-24 2xl:max-h-36 bg-cover"
             />
 
-            <div className="w-[60%] p-4 md:p-4">
+            <div className="w-[70%] 2xl:w-[60%] p-4 md:p-4">
               <h1 className="text-base md:text-xl font-semibold text-gray-800 dark:text-white">
                 {categorie.product_categorie}
               </h1>
