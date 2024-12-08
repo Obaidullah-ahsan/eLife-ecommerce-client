@@ -7,11 +7,19 @@ import { FaUser } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
 import useCart from "../../Hooks/useCart";
 import useWishlist from "../../Hooks/useWishlist";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-  const [cart] = useCart();
-  const [wishlist] = useWishlist();
+  const [cart, cartRefetch] = useCart();
+  const [wishlist, wishlistRefetch] = useWishlist();
+  useEffect(() => {
+    if (user?.email) {
+      cartRefetch();
+      wishlistRefetch();
+    }
+  }, [cartRefetch, wishlistRefetch, user]);
+
   const handleLogout = () => {
     logout()
       .then(() => {
@@ -78,32 +86,36 @@ const Navbar = () => {
         <div className="flex gap-7">
           {user && (
             <div className="indicator">
-              <FaRegHeart size={18} />
-              <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
-                {wishlist?.length}
-              </span>
+              <Link to="/wishlist">
+                <FaRegHeart size={18} />
+                <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
+                  {wishlist?.length}
+                </span>
+              </Link>
             </div>
           )}
           <div className="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            {user && (
-              <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
-                {cart?.length}
-              </span>
-            )}
+            <Link to="/cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              {user && (
+                <span className="badge badge-xs h-4 bg-[#F26E21] text-white border-none indicator-item">
+                  {cart?.length}
+                </span>
+              )}
+            </Link>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Products from "../pages/Products/Products";
 import About from "../pages/About/About";
+import Cart from "../pages/Cart/Cart";
+import Wishlist from "../pages/Wishlist/Wishlist";
 
 export const router = createBrowserRouter([
   {
@@ -16,10 +18,10 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       // Categories section route
-      {
-        path: "/",
-        element: <Home></Home>,
-      },
+      // {
+      //   path: "/",
+      //   element: <Home></Home>,
+      // },
       {
         path: "/products",
         element: <Products></Products>,
@@ -39,6 +41,16 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      // Cart route
+      {
+        path: "/cart",
+        element: <Cart></Cart>,
+      },
+      // Wishlist route
+      {
+        path: "/wishlist",
+        element: <Wishlist></Wishlist>,
       },
     ],
   },
