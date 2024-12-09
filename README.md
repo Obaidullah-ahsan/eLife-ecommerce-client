@@ -1,8 +1,16 @@
-# React + Vite
+- Live site URL [eLife Ecommerce](https://elife-ecommerce.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# eLife - E-commerce Website
 
-Currently, two official plugins are available:
+Welcome to **eLife**, a modern e-commerce platform designed to provide an exceptional online shopping experience. The website offers various product categories, a cart functionality, and a wishlist feature to help users manage their shopping conveniently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Homepage with Categories**:- Users can explore different categories of products right from the homepage.
+
+- **Products Page with Search and Filter**  
+  Users can:
+  - Search for products by name or keyword.
+  - Filter products by categories and brand.
+
+- **Cart Items**:- Users can Add and remove items in the shopping cart.
+
+- **Wishlist**:- Save your favorite items to your wishlist for future purchases.

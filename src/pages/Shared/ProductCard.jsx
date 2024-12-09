@@ -26,14 +26,16 @@ const ProductCard = ({ product }) => {
         product_category,
         brand,
       };
-      axios.post("http://localhost:5000/cart", cartProduct).then((res) => {
-        if (res.data?.insertedId === null) {
-          toast.error(res.data?.Message);
-        } else {
-          toast.success("Product Added To Cart");
-          cartRefetch();
-        }
-      });
+      axios
+        .post("https://e-life-ecommerce-server.vercel.app/cart", cartProduct)
+        .then((res) => {
+          if (res.data?.insertedId === null) {
+            toast.error(res.data?.Message);
+          } else {
+            toast.success("Product Added To Cart");
+            cartRefetch();
+          }
+        });
     }
   };
   const handleAddWishlist = (id) => {
@@ -51,13 +53,16 @@ const ProductCard = ({ product }) => {
         brand,
       };
       axios
-        .post("http://localhost:5000/wishlist", wishlistProduct)
+        .post(
+          "https://e-life-ecommerce-server.vercel.app/wishlist",
+          wishlistProduct
+        )
         .then((res) => {
           if (res.data?.insertedId === null) {
             toast.error(res.data?.Message);
           } else {
             toast.success("Product Added To Wishlist");
-            wishlistRefetch()
+            wishlistRefetch();
           }
         });
     }

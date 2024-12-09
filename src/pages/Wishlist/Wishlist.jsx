@@ -15,16 +15,18 @@ const Wishlist = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/wishlist/${id}`).then((res) => {
-          if (res.data.deletedCount > 0) {
-            wishlistRefetch();
-            Swal.fire({
-              title: "Deleted!",
-              text: "Your product has been deleted.",
-              icon: "success",
-            });
-          }
-        });
+        axios
+          .delete(`https://e-life-ecommerce-server.vercel.app/wishlist/${id}`)
+          .then((res) => {
+            if (res.data.deletedCount > 0) {
+              wishlistRefetch();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your product has been deleted.",
+                icon: "success",
+              });
+            }
+          });
       }
     });
   };

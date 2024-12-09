@@ -7,7 +7,9 @@ const useWishlist = () => {
   const { data: wishlist = [], refetch: wishlistRefetch } = useQuery({
     queryKey: ["wishlistData"],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/wishlist/${user?.email}`);
+      const res = await axios.get(
+        `https://e-life-ecommerce-server.vercel.app/wishlist/${user?.email}`
+      );
       return res.data;
     },
   });

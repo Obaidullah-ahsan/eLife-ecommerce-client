@@ -142,7 +142,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleLogout}
-                className="btn h-10 min-h-10 bg-[#F26E21] border-none rounded-none flex gap-2"
+                className="btn h-10 min-h-10 bg-[#F26E21] text-white border-none rounded-none flex gap-2"
               >
                 Logout <IoIosLogOut size={18} />
               </button>

@@ -15,16 +15,18 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/cart/${id}`).then((res) => {
-          if (res.data.deletedCount > 0) {
-            cartRefetch();
-            Swal.fire({
-              title: "Deleted!",
-              text: "Your product has been deleted.",
-              icon: "success",
-            });
-          }
-        });
+        axios
+          .delete(`https://e-life-ecommerce-server.vercel.app/cart/${id}`)
+          .then((res) => {
+            if (res.data.deletedCount > 0) {
+              cartRefetch();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your product has been deleted.",
+                icon: "success",
+              });
+            }
+          });
       }
     });
   };

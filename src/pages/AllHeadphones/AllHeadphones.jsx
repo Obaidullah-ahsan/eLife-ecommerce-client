@@ -4,15 +4,17 @@ import { ScaleLoader } from "react-spinners";
 import ProductCard from "../Shared/ProductCard";
 
 const AllHeadphones = () => {
-    const [headphones, setHeadphones] = useState([]);
-    const [loading, setLoading] = useState(false);
-    useEffect(() => {
-      setLoading(true);
-      axios.get("http://localhost:5000/products/headphone").then((res) => {
+  const [headphones, setHeadphones] = useState([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("https://e-life-ecommerce-server.vercel.app/products/headphone")
+      .then((res) => {
         setHeadphones(res.data);
         setLoading(false);
       });
-    }, []);
+  }, []);
   return (
     <div className="px-4 md:px-12 lg:px-24 my-10 2xl:my-14">
       <div>

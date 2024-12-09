@@ -24,9 +24,14 @@ const Register = () => {
               name,
               role: "customer",
             };
-            axios.post("http://localhost:5000/users", userInfo).then((res) => {
-              console.log(res.data);
-            });
+            axios
+              .post(
+                "https://e-life-ecommerce-server.vercel.app/users",
+                userInfo
+              )
+              .then((res) => {
+                console.log(res.data);
+              });
             toast.success("User Register Successfully");
             form.reset();
             // when user Successfully register user navigate homepage
