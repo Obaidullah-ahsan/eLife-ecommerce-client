@@ -12,6 +12,7 @@ import Laptop from "../pages/Laptop/Laptop";
 import AllHeadphones from "../pages/AllHeadphones/AllHeadphones";
 import AllSmartwatch from "../pages/AllSmartwatch/AllSmartwatch";
 import AllPhone from "../pages/AllPhone/AllPhone";
+import PrivateRoutes from "../Routes/PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -67,12 +68,20 @@ export const router = createBrowserRouter([
       // Cart route
       {
         path: "/cart",
-        element: <Cart></Cart>,
+        element: (
+          <PrivateRoutes>
+            <Cart></Cart>
+          </PrivateRoutes>
+        ),
       },
       // Wishlist route
       {
         path: "/wishlist",
-        element: <Wishlist></Wishlist>,
+        element: (
+          <PrivateRoutes>
+            <Wishlist></Wishlist>
+          </PrivateRoutes>
+        ),
       },
     ],
   },
