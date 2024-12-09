@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
         if (res.data?.insertedId === null) {
           toast.error(res.data?.Message);
         } else {
-          toast.success("Product Added Successfully");
+          toast.success("Product Added To Cart");
           cartRefetch();
         }
       });
@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
           if (res.data?.insertedId === null) {
             toast.error(res.data?.Message);
           } else {
-            toast.success("Product Added Successfully");
+            toast.success("Product Added To Wishlist");
             wishlistRefetch()
           }
         });

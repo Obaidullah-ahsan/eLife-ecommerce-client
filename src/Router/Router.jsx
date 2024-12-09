@@ -13,6 +13,7 @@ import AllHeadphones from "../pages/AllHeadphones/AllHeadphones";
 import AllSmartwatch from "../pages/AllSmartwatch/AllSmartwatch";
 import AllPhone from "../pages/AllPhone/AllPhone";
 import PrivateRoutes from "../Routes/PrivateRoutes";
+import AllTablet from "../pages/AllTablet/AllTablet";
 
 export const router = createBrowserRouter([
   {
@@ -59,7 +60,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/tablet",
-        element: <Laptop></Laptop>,
+        element: <AllTablet></AllTablet>,
       },
       {
         path: "/laptop",
