@@ -11,7 +11,7 @@ const Banner = () => {
           Experience natural life like audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Link to="/products" className="btn hover:btn-outline bg-[#F26E21] text-white border-0 px-8 h-10 min-h-10 uppercase rounded-none">See product</Link>
+        <Link to="/products" className="btn hover:btn-outline bg-[#F26E21] hover:bg-black text-white border-0 px-8 h-10 min-h-10 uppercase rounded-none">See product</Link>
       </div>
     </div>
   );

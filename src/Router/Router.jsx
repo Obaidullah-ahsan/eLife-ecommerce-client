@@ -14,6 +14,7 @@ import AllSmartwatch from "../pages/AllSmartwatch/AllSmartwatch";
 import AllPhone from "../pages/AllPhone/AllPhone";
 import PrivateRoutes from "../Routes/PrivateRoutes";
 import AllTablet from "../pages/AllTablet/AllTablet";
+import Services from "../pages/Services/Services";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Home></Home>,
+        element: <Services></Services>,
       },
       {
         path: "/about",

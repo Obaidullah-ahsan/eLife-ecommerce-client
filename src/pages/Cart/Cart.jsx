@@ -3,6 +3,7 @@ import useCart from "../../Hooks/useCart";
 import Swal from "sweetalert2";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cart, cartRefetch] = useCart();
@@ -59,15 +60,22 @@ const Cart = () => {
   };
   return (
     <div>
-      <section className="px-4 md:px-12 lg:px-24 mt-6 mb-14 2xl:mb-14">
-        <div className="flex items-center gap-x-3">
-          <h2 className="text-xl font-bold ml-2 text-gray-800 dark:text-white">
-            Cart Items
-          </h2>
+      <div className="px-4 md:px-12 lg:px-24 mt-6 mb-14 2xl:mb-14">
+        <div className="flex justify-between">
+          <div className="flex items-center gap-x-3">
+            <h2 className="text-xl font-bold ml-2 text-gray-800 dark:text-white">
+              Cart Items
+            </h2>
 
-          <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">
-            {cart.length} Items
-          </span>
+            <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">
+              {cart.length} Items
+            </span>
+          </div>
+          <Link to="/checkout">
+            <button className="btn rounded-none min-h-10 h-10 bg-[#F26E21] text-white border-none hover:bg-black">
+              Pay Now
+            </button>
+          </Link>
         </div>
 
         <div className="flex flex-col mt-4">
@@ -88,13 +96,6 @@ const Cart = () => {
                         className="text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         Product Name
-                      </th>
-
-                      <th
-                        scope="col"
-                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
-                      >
-                        <p>Brand</p>
                       </th>
 
                       <th
@@ -146,13 +147,6 @@ const Cart = () => {
                             </h2>
                           </div>
                         </td>
-                        <td className="px-4 py-4 text-center text-sm font-medium text-gray-700 whitespace-nowrap">
-                          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                            <h2 className="text-sm font-semibold text-emerald-500">
-                              {product.brand}
-                            </h2>
-                          </div>
-                        </td>
                         <td className="px-4 py-4 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                           ${product?.price}
                         </td>
@@ -166,14 +160,16 @@ const Cart = () => {
                                 )
                               }
                               className={`${
-                                product?.quantity === 1 ?
-                                "btn-disabled text-base-300" : "text-black"
+                                product?.quantity === 1
+                                  ? "btn-disabled text-base-300"
+                                  : "text-black"
                               }`}
                             >
                               <FaMinus />
                             </button>
                             <p>{product?.quantity}</p>
-                            <button className="text-black"
+                            <button
+                              className="text-black"
                               onClick={() =>
                                 handleQuantityPlus(
                                   product?._id,
@@ -212,7 +208,7 @@ const Cart = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

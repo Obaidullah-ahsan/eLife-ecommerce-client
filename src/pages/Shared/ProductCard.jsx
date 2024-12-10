@@ -80,7 +80,7 @@ const ProductCard = ({ product }) => {
       </figure>
       <div className="card-body">
         <h2 className="md:text-lg font-bold">{product_name}</h2>
-        <p className="text-[#F26E21] text-lg font-bold">Price: ${price}</p>
+        <p className="text-[#F26E21] text-base font-bold">Price: ${price}</p>
         <div className="flex gap-4">
           <button
             onClick={() => handleAddCart(_id)}

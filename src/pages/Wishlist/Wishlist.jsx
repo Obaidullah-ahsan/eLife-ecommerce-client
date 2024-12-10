@@ -73,12 +73,6 @@ const Wishlist = () => {
                     >
                       Price
                     </th>
-                    {/* <th
-                      scope="col"
-                      className="px-4 py-3.5 text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                    >
-                      Total price
-                    </th> */}
 
                     <th
                       scope="col"
@@ -120,9 +114,6 @@ const Wishlist = () => {
                       <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                         ${product.price}
                       </td>
-                      {/* <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        {product.price * 2}
-                      </td> */}
                       <td className="px-4 py-4 text-sm whitespace-nowrap">
                         <button
                           onClick={() => handleWishlistDelete(product._id)}

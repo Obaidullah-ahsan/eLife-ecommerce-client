@@ -142,7 +142,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleLogout}
-                className="btn h-10 min-h-10 bg-[#F26E21] text-white border-none rounded-none flex gap-2"
+                className="btn h-10 min-h-10 bg-[#F26E21] hover:bg-black text-white border-none rounded-none flex gap-2"
               >
                 Logout <IoIosLogOut size={18} />
               </button>
@@ -151,7 +151,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/login"
-            className="btn hover:btn-outline h-10 min-h-10 bg-[#F26E21] border-none text-white rounded-none"
+            className="btn hover:btn-outline h-10 min-h-10 bg-[#F26E21] hover:bg-black border-none text-white rounded-none"
           >
             Login
           </Link>
