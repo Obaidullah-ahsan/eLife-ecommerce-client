@@ -7,9 +7,7 @@ const useCart = () => {
   const { data: cart = [], refetch: cartRefetch } = useQuery({
     queryKey: ["cartData"],
     queryFn: async () => {
-      const res = await axios.get(
-        `https://e-life-ecommerce-server.vercel.app/cart/${user?.email}`
-      );
+      const res = await axios.get(`http://localhost:5000/cart/${user?.email}`);
       return res.data;
     },
   });

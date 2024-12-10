@@ -25,17 +25,16 @@ const ProductCard = ({ product }) => {
         image,
         product_category,
         brand,
+        quantity: 1,
       };
-      axios
-        .post("https://e-life-ecommerce-server.vercel.app/cart", cartProduct)
-        .then((res) => {
-          if (res.data?.insertedId === null) {
-            toast.error(res.data?.Message);
-          } else {
-            toast.success("Product Added To Cart");
-            cartRefetch();
-          }
-        });
+      axios.post("http://localhost:5000/cart", cartProduct).then((res) => {
+        if (res.data?.insertedId === null) {
+          toast.error(res.data?.Message);
+        } else {
+          toast.success("Product Added To Cart");
+          cartRefetch();
+        }
+      });
     }
   };
   const handleAddWishlist = (id) => {
@@ -53,10 +52,7 @@ const ProductCard = ({ product }) => {
         brand,
       };
       axios
-        .post(
-          "https://e-life-ecommerce-server.vercel.app/wishlist",
-          wishlistProduct
-        )
+        .post("http://localhost:5000/wishlist", wishlistProduct)
         .then((res) => {
           if (res.data?.insertedId === null) {
             toast.error(res.data?.Message);
@@ -84,7 +80,7 @@ const ProductCard = ({ product }) => {
       </figure>
       <div className="card-body">
         <h2 className="md:text-lg font-bold">{product_name}</h2>
-        <p className="text-[#F26E21] text-lg font-bold">Tk. {price}</p>
+        <p className="text-[#F26E21] text-lg font-bold">Price: ${price}</p>
         <div className="flex gap-4">
           <button
             onClick={() => handleAddCart(_id)}

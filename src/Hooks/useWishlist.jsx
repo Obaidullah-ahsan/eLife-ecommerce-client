@@ -8,7 +8,7 @@ const useWishlist = () => {
     queryKey: ["wishlistData"],
     queryFn: async () => {
       const res = await axios.get(
-        `https://e-life-ecommerce-server.vercel.app/wishlist/${user?.email}`
+        `http://localhost:5000/wishlist/${user?.email}`
       );
       return res.data;
     },

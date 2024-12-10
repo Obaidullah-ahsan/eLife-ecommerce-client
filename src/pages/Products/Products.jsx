@@ -14,7 +14,7 @@ const Products = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://e-life-ecommerce-server.vercel.app/products", {
+      .get("http://localhost:5000/products", {
         params: {
           search,
           brand,

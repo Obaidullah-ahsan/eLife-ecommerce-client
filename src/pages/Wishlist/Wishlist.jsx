@@ -15,18 +15,16 @@ const Wishlist = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .delete(`https://e-life-ecommerce-server.vercel.app/wishlist/${id}`)
-          .then((res) => {
-            if (res.data.deletedCount > 0) {
-              wishlistRefetch();
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your product has been deleted.",
-                icon: "success",
-              });
-            }
-          });
+        axios.delete(`http://localhost:5000/wishlist/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            wishlistRefetch();
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your product has been deleted.",
+              icon: "success",
+            });
+          }
+        });
       }
     });
   };
@@ -120,7 +118,7 @@ const Wishlist = () => {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        {product.price}
+                        ${product.price}
                       </td>
                       {/* <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                         {product.price * 2}

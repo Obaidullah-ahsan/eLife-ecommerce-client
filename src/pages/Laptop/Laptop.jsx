@@ -8,12 +8,10 @@ const Laptop = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    axios
-      .get("https://e-life-ecommerce-server.vercel.app/products/laptop")
-      .then((res) => {
-        setLaptops(res.data);
-        setLoading(false);
-      });
+    axios.get("http://localhost:5000/products/laptop").then((res) => {
+      setLaptops(res.data);
+      setLoading(false);
+    });
   }, []);
   return (
     <div className="px-4 md:px-12 lg:px-24 my-10 2xl:my-14">

@@ -14,11 +14,9 @@ const SocialLogin = () => {
           name: result.user?.displayName,
           role: "customer",
         };
-        axios
-          .post("https://e-life-ecommerce-server.vercel.app/users", userInfo)
-          .then((res) => {
-            console.log(res.data);
-          });
+        axios.post("http://localhost:5000/users", userInfo).then((res) => {
+          console.log(res.data);
+        });
         toast.success("User Login Successfully");
         navigate("/");
         console.log(result.user);

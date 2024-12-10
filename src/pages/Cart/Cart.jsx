@@ -1,6 +1,8 @@
 import axios from "axios";
 import useCart from "../../Hooks/useCart";
 import Swal from "sweetalert2";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
 
 const Cart = () => {
   const [cart, cartRefetch] = useCart();
@@ -15,26 +17,51 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .delete(`https://e-life-ecommerce-server.vercel.app/cart/${id}`)
-          .then((res) => {
-            if (res.data.deletedCount > 0) {
-              cartRefetch();
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your product has been deleted.",
-                icon: "success",
-              });
-            }
-          });
+        axios.delete(`http://localhost:5000/cart/${id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            cartRefetch();
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your product has been deleted.",
+              icon: "success",
+            });
+          }
+        });
       }
     });
+  };
+
+  const handleQuantityPlus = (id, quantity) => {
+    const updatedQuantity = {
+      quantity: quantity + 1,
+    };
+    axios
+      .patch(`http://localhost:5000/cart/quantity/${id}`, updatedQuantity)
+      .then((res) => {
+        if (res.data.modifiedCount > 0) {
+          cartRefetch();
+        }
+      });
+  };
+
+  const handleQuantityMinus = (id, quantity) => {
+    console.log(quantity);
+    const updatedQuantity = {
+      quantity: quantity - 1,
+    };
+    axios
+      .patch(`http://localhost:5000/cart/quantity/${id}`, updatedQuantity)
+      .then((res) => {
+        if (res.data.modifiedCount > 0) {
+          cartRefetch();
+        }
+      });
   };
   return (
     <div>
       <section className="px-4 md:px-12 lg:px-24 mt-6 mb-14 2xl:mb-14">
         <div className="flex items-center gap-x-3">
-          <h2 className="text-lg font-bold ml-2 text-gray-800 dark:text-white">
+          <h2 className="text-xl font-bold ml-2 text-gray-800 dark:text-white">
             Cart Items
           </h2>
 
@@ -52,40 +79,46 @@ const Cart = () => {
                     <tr>
                       <th
                         scope="col"
-                        className="py-3.5 px-4 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="py-3.5 px-4 text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         Image
                       </th>
                       <th
                         scope="col"
-                        className="py-3.5 px-4 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         Product Name
                       </th>
 
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         <p>Brand</p>
                       </th>
 
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         Price
                       </th>
-                      {/* <th
+                      <th
                         scope="col"
-                        className="px-4 py-3.5 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
-                        Total price
-                      </th> */}
+                        Quantity
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
+                      >
+                        SubTotal
+                      </th>
 
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-center rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         Action
                       </th>
@@ -97,7 +130,7 @@ const Cart = () => {
                       className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900"
                     >
                       <tr>
-                        <td className="px-4 py-4">
+                        <td className="px-4 py-4 text-center">
                           <div className="inline-flex items-center gap-x-3">
                             <img
                               className="object-cover w-10 h-10 rounded-lg"
@@ -106,27 +139,56 @@ const Cart = () => {
                             />
                           </div>
                         </td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                        <td className="text-center text-sm font-medium text-gray-700 whitespace-nowrap">
                           <div>
                             <h2 className="font-medium text-gray-800 dark:text-white ">
                               {product.product_name}
                             </h2>
                           </div>
                         </td>
-                        <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                        <td className="px-4 py-4 text-center text-sm font-medium text-gray-700 whitespace-nowrap">
                           <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
                             <h2 className="text-sm font-semibold text-emerald-500">
                               {product.brand}
                             </h2>
                           </div>
                         </td>
-                        <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                          {product.price}
+                        <td className="px-4 py-4 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                          ${product?.price}
                         </td>
-                        {/* <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                          {product.price * 2}
-                        </td> */}
-                        <td className="px-4 py-4 text-sm whitespace-nowrap">
+                        <td className="px-4 py-4 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                          <div className="flex items-center justify-center gap-3 border p-1">
+                            <button
+                              onClick={() =>
+                                handleQuantityMinus(
+                                  product?._id,
+                                  product?.quantity
+                                )
+                              }
+                              className={`${
+                                product?.quantity === 1 ?
+                                "btn-disabled text-base-300" : "text-black"
+                              }`}
+                            >
+                              <FaMinus />
+                            </button>
+                            <p>{product?.quantity}</p>
+                            <button className="text-black"
+                              onClick={() =>
+                                handleQuantityPlus(
+                                  product?._id,
+                                  product?.quantity
+                                )
+                              }
+                            >
+                              <FaPlus />
+                            </button>
+                          </div>
+                        </td>
+                        <td className="px-4 py-4 text-center text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                          ${product?.price * product?.quantity}
+                        </td>
+                        <td className="px-4 py-4 text-center text-sm whitespace-nowrap">
                           <button
                             onClick={() => handleCartDelete(product._id)}
                             className="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none"
