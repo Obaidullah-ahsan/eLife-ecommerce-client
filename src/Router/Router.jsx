@@ -15,6 +15,7 @@ import AllPhone from "../pages/AllPhone/AllPhone";
 import PrivateRoutes from "../Routes/PrivateRoutes";
 import AllTablet from "../pages/AllTablet/AllTablet";
 import Services from "../pages/Services/Services";
+import Checkout from "../pages/Checkout/Checkout";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +83,15 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Wishlist></Wishlist>
+          </PrivateRoutes>
+        ),
+      },
+      // checkout route
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoutes>
+            <Checkout></Checkout>
           </PrivateRoutes>
         ),
       },

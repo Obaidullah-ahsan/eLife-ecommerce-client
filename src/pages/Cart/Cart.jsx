@@ -63,7 +63,7 @@ const Cart = () => {
       <div className="px-4 md:px-12 lg:px-24 mt-6 mb-14 2xl:mb-14">
         <div className="flex justify-between">
           <div className="flex items-center gap-x-3">
-            <h2 className="text-xl font-bold ml-2 text-gray-800 dark:text-white">
+            <h2 className="text-xl font-bold uppercase ml-2 text-gray-800 dark:text-white">
               Cart Items
             </h2>
 
@@ -71,10 +71,11 @@ const Cart = () => {
               {cart.length} Items
             </span>
           </div>
-          <Link to="/checkout">
-            <button className="btn rounded-none min-h-10 h-10 bg-[#F26E21] text-white border-none hover:bg-black">
-              Pay Now
-            </button>
+          <Link
+            to="/checkout"
+            className={`${cart.length < 1 ? "btn-disabled" : "bg-[#F26E21] text-white border-none hover:bg-black"} btn rounded-none min-h-10 h-10`}
+          >
+            Pay Now
           </Link>
         </div>
 

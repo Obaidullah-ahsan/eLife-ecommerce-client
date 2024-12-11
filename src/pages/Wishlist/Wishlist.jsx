@@ -31,7 +31,7 @@ const Wishlist = () => {
   return (
     <section className="px-4 md:px-12 lg:px-24 mt-6 mb-14 2xl:mb-14">
       <div className="flex items-center gap-x-3">
-        <h2 className="text-lg font-bold ml-2 text-gray-800 dark:text-white">
+        <h2 className="text-lg font-bold uppercase ml-2 text-gray-800 dark:text-white">
           Wishlist Items
         </h2>
 
